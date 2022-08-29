@@ -10,8 +10,9 @@ import {
     Group,
     Button,
   } from '@mantine/core';
-  
-  export default function AuthenticationTitle() {
+import { useRouter } from 'next/router';
+export default function AuthenticationTitle() {
+    const router = useRouter();
     return (
       <Container size={420} my={40}>
         <Title
@@ -21,7 +22,11 @@ import {
         </Title>
         <Text color="dimmed" size="sm" align="center" mt={5}>
           No tenes cuenta todavia?{' '}
-          <Anchor href="#" size="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor href="#" size="sm" 
+            onClick={(event) => {
+                event.preventDefault();
+                router.push("/crear")
+            }}>
             Crear cuenta    
           </Anchor>
         </Text>
@@ -31,9 +36,13 @@ import {
           <PasswordInput label="Password" placeholder="Tu contraseña" required mt="md" />
           <Group  position="apart" mt="md">
             <Checkbox label="Recuérdame" />
-            <Anchor onClick={(event) => event.preventDefault()} href="#" size="sm">
-              Olvidaste tú contraseña?
-            </Anchor>
+            <Anchor href="#" size="sm" 
+            onClick={(event) => {
+                event.preventDefault();
+                router.push("/forgot")
+            }}>
+            Olvidaste tú contraseña?   
+          </Anchor>
           </Group>
           <Button className='control1' fullWidth mt="xl">
             Iniciar sesión
