@@ -1,11 +1,20 @@
 import React from 'react';
 import Head from "next/head"
+import { HeaderResponsive } from '../components/Header';
+
 export default function HeroText() {
     return (
         <React.Fragment>
             <Head>
                 <title>Más información</title>
             </Head>
+            <HeaderResponsive links={
+        [
+          { link: '/login', label: 'Iniciar sesión' },
+          { link: '/register', label: 'Registrarse' },
+          { link: '/professionals', label: 'Para profesionales' },
+        ]
+      } />
             <body>
                <h1>Mas Información</h1>
                <h2>mitos sobre el suicidio</h2>

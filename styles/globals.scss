@@ -1,9 +1,9 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,300,400&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 a {
@@ -12,6 +12,7 @@ a {
 }
 
 * {
+  font-family: 'Satoshi', sans-serif !important;
   box-sizing: border-box;
 }
 
@@ -50,7 +51,6 @@ a {
   letter-spacing: -1px;
   color: #171717;
   margin-bottom: 8px; 
-  font-family: 'Greycliff CF', sans-serif;  
   @media (max-width: 520px) {
     font-size: 28px;
     text-align: left;
@@ -95,6 +95,8 @@ a {
 .control1{
   background-color: #45FFBD;
   color: #000;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 800;
   &:hover{
     background-color: #45FFBD;
   }
