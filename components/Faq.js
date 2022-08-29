@@ -1,141 +1,67 @@
-import {
-    createStyles,
-    Title,
-    Container,
-    Accordion,
-    ThemeIcon,
-    MantineProvider,
-  } from '@mantine/core';
-  import { IconPlus } from '@tabler/icons';
-  
-  const useStyles = createStyles((theme, _params, getRef) => {
-    const icon = getRef('control');
-  
-    return {
-      wrapper: {
-        paddingTop: theme.spacing.xl * 2,
-        minHeight: 820,
-        backgroundImage: `radial-gradient(${theme.colors[theme.primaryColor][6]} 0%, ${
-          theme.colors[theme.primaryColor][4]
-        } 100%)`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top left',
-        position: 'relative',
-        color: theme.black,
-      },
-  
-      title: {
-        color: theme.white,
-        fontSize: 52,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        marginBottom: theme.spacing.xl * 1.5,
-      },
-  
-      item: {
-        backgroundColor: theme.white,
-        borderBottom: 0,
-        borderRadius: theme.radius.md,
-        boxShadow: theme.shadows.lg,
-        overflow: 'hidden',
-      },
-  
-      control: {
-        fontSize: theme.fontSizes.lg,
-        padding: `${theme.spacing.lg}px ${theme.spacing.xl}px`,
-        color: theme.black,
-  
-        '&:hover': {
-          backgroundColor: 'transparent',
-        },
-      },
-  
-      content: {
-        paddingLeft: theme.spacing.xl,
-        lineHeight: 1.6,
-        color: theme.black,
-      },
-  
-      icon: {
-        ref: icon,
-        marginLeft: theme.spacing.md,
-      },
-  
-      gradient: {
-        backgroundImage: `radial-gradient(${theme.colors[theme.primaryColor][6]} 0%, ${
-          theme.colors[theme.primaryColor][5]
-        } 100%)`,
-      },
-  
-      itemOpened: {
-        [`& .${icon}`]: {
-          transform: 'rotate(45deg)',
-        },
-      },
-  
-      button: {
-        display: 'block',
-        marginTop: theme.spacing.md,
-  
-        '@media (max-width: 755px)': {
-          display: 'block',
-          width: '100%',
-        },
-      },
-    };
-  });
-  
-  const placeholder =
-    'It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.It was born from sludge on the ocean floor. In a sterile environment, the germs within its body can’t multiply, and it dies.It has no eyeballs, so it can’t see. It checks its surroundings via the ultrasonic waves it emits from its mouth.';
-  
-  export function FaqWithBg() {
-    const { classes } = useStyles();
-    return (
-      <MantineProvider inherit theme={{ colorScheme: 'light' }}>
-        <div className={classes.wrapper}>
-          <Container size="sm">
-            <Title align="center" className={classes.title}>
-              Frequently Asked Questions
-            </Title>
-  
-            <Accordion
-              chevronPosition="right"
-              defaultValue="reset-password"
-              chevronSize={50}
-              variant="separated"
-              disableChevronRotation
-              chevron={
-                <ThemeIcon radius="xl" className={classes.gradient} size={32}>
-                  <IconPlus size={18} stroke={1.5} />
-                </ThemeIcon>
-              }
-            >
-              <Accordion.Item className={classes.item} value="reset-password">
-                <Accordion.Control>How can I reset my password?</Accordion.Control>
-                <Accordion.Panel>{placeholder}</Accordion.Panel>
-              </Accordion.Item>
-  
-              <Accordion.Item className={classes.item} value="another-account">
-                <Accordion.Control>Can I create more that one account?</Accordion.Control>
-                <Accordion.Panel>{placeholder}</Accordion.Panel>
-              </Accordion.Item>
-  
-              <Accordion.Item className={classes.item} value="newsletter">
-                <Accordion.Control>How can I subscribe to monthly newsletter?</Accordion.Control>
-                <Accordion.Panel>{placeholder}</Accordion.Panel>
-              </Accordion.Item>
-  
-              <Accordion.Item className={classes.item} value="credit-card">
-                <Accordion.Control>Do you store credit card information securely?</Accordion.Control>
-                <Accordion.Panel>{placeholder}</Accordion.Panel>
-              </Accordion.Item>
-  
-              <Accordion.Item className={classes.item} value="payment">
-                <Accordion.Control>What payment systems to you work with?</Accordion.Control>
-                <Accordion.Panel>{placeholder}</Accordion.Panel>
-              </Accordion.Item>
-            </Accordion>
-          </Container>
-        </div>
-      </MantineProvider>
+import React from "react";
+import { Group, Avatar, Text, Accordion } from '@mantine/core';
+
+const charactersList = [
+  {
+    id: 'bender',
+    image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
+    label: 'preguntar a una persona si está pensando en suicidarse, puede incitarle a hacerlo.',
+    description: '',
+    content: "Está demostrado que preguntar y hablar con la persona sobre la presencia de pensamientos suicidas, disminuye el riesgo de cometer el acto. Hablar siempre genera alivio en la persona que está sufriendo.Es muy importante acercarse con una actitud de comprensión y de escucha, para que sienta tu deseo de ayudar y tu preocupación. No intentes discutir o minimizar estas ideas. Dejalx hablar de lo que le pasa.",
+  },
+
+  {
+    id: 'carol',
+    image: 'https://img.icons8.com/clouds/256/000000/futurama-mom.png',
+    label: 'Carol Miller',
+    description: 'One of the richest people on Earth',
+    content: "Carol Miller (born January 30, 2880), better known as Mom, is the evil chief executive officer and shareholder of 99.7% of Momcorp, one of the largest industrial conglomerates in the universe and the source of most of Earth's robots. She is also one of the main antagonists of the Futurama series.",
+  },
+
+  {
+    id: 'homer',
+    image: 'https://img.icons8.com/clouds/256/000000/homer-simpson.png',
+    label: 'Homer Simpson',
+    description: 'Overweight, lazy, and often ignorant',
+    content: 'Homer Jay Simpson (born May 12) is the main protagonist and one of the five main characters of The Simpsons series(or show). He is the spouse of Marge Simpson and father of Bart, Lisa and Maggie Simpson.',
+  },
+];
+
+function AccordionLabel({ label, image, description }) {
+  return (
+    <Group noWrap>
+      <Avatar src={image} radius="xl" size="lg" />
+      <div>
+        <Text>{label}</Text>
+        <Text size="sm" color="dimmed" weight={400}>
+          {description}
+        </Text>
+      </div>
+    </Group>
+  );
+}
+
+export default function Faq() {
+  const [items, setItems] = React.useState([]);
+  React.useEffect(()=>{
+    setItems(charactersList)
+    console.log(charactersList)
+  }, [])
+
+  return (
+    <Accordion chevronPosition="right" variant="contained">{
+      items.length > 0 && (
+        items.map((item) => (
+          <Accordion.Item value={item.id} key={item.label}>
+            <Accordion.Control>
+              <AccordionLabel {...item} />
+            </Accordion.Control>
+            <Accordion.Panel>
+              <Text size="sm">{item.content}</Text>
+            </Accordion.Panel>
+          </Accordion.Item>
+        ))
+      )  
+    }</Accordion>
     );
-  }
+}
