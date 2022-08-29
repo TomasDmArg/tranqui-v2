@@ -1,9 +1,17 @@
 import React from "react";
 import { Image } from '@mantine/core';
+import { HeaderResponsive } from '../components/Header';
 
 export default function Page(){
     return(
         <React.Fragment>
+            <HeaderResponsive links={
+            [
+                { link: '/login', label: 'Iniciar sesión' },
+                { link: '/register', label: 'Registrarse' },
+                { link: '/professionals', label: 'Para profesionales' },
+            ]
+            } />
             <h1>Sobre Tranqui</h1>
             <p>Tranqui App es una herramienta para la prevención del suicidio, que apunta al acompañamiento en crisis y a la psicoeducación sobre esta problemática. Por eso, está pensada para ser utilizada por personas que están atravesando esta situación, familiares, amigxs, profesionales de salud, docentes, entre otros.</p>
             <p>Todo el contenido de Tranqui App ha sido desarrollado siguiendo las recomendaciones de la Organización Mundial de la Salud, el Ministerio de Salud de la Nación Argentina, UNICEF, y de asociaciones nacionales e internacionales que se dedican a la prevención del suicidio -International Association for Suicide Prevention, Fundación Salud Mental España, y American Association of Suicidology-.</p>

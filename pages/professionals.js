@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeaderResponsive } from '../components/Header';
 import { Button} from '@mantine/core';
 import { Image } from '@mantine/core';
 import { Accordion } from '@mantine/core';
@@ -7,12 +8,18 @@ import { IconPlus } from '@tabler/icons';
 export default function Page() {
   return(
     <React.Fragment>
-
+        <HeaderResponsive links={
+        [
+          { link: '/login', label: 'Iniciar sesión' },
+          { link: '/register', label: 'Registrarse' },
+          { link: '/professionals', label: 'Para profesionales' },
+        ]
+      } />
         <h1>Marco legal y normativo argentino</h1>
         <h2>Ley Nacional de prevencion del suicidio N°27.130</h2>
-        <Button href="/Ley_27130.pdf" component="a" rel="noopener noreferrer">Ver mas!</Button>
+        <Button href="/Ley_27130.pdf" component="a" rel="noopener noreferrer " target='_blank'>Ver mas!</Button>
         <h2>Ley Nacional de salud mental N°26.667</h2>
-        <Button href="/Ley_26667.pdf" component="a" rel="noopener noreferrer">Ver Mas!</Button>
+        <Button href="/Ley_26667.pdf" component="a" rel="noopener noreferrer" target='_blank'>Ver Mas!</Button>
         <h1>Delimitaciones conceptuales</h1>
         <Image
             src="/"
