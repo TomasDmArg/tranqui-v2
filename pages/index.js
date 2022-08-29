@@ -4,8 +4,9 @@ import Image from 'next/image';
 import { Dots } from '../components/Dots';
 import { HeaderResponsive } from '../components/Header';
 import React from 'react';
-
+import { useRouter } from "next/router";
 export default function HeroText() {
+  const router = useRouter();
   return (
     <React.Fragment>
       <Head>
@@ -50,7 +51,9 @@ export default function HeroText() {
             </Button>
           </div>
           <div className="controls">
-            <Button className="control" size="lg" variant="subtle" color="gray">
+            <Button className="control" size="lg" variant="subtle" color="gray"
+              onClick={()=> router.push("/masinfo")}
+            >
               Mas información
             </Button>
           </div>
