@@ -2,6 +2,8 @@ import React from 'react';
 import Head from "next/head"
 import Faq from '../components/faq';
 import Faq2 from '../components/Faq2';
+import Faq3 from '../components/Faq3';
+import Faq4 from '../components/Faq4';
 export default function HeroText() {
     return (
         <React.Fragment>
