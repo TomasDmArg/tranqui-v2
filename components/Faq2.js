@@ -45,31 +45,26 @@ const charactersList = [
         label: 'Factores Precipitantes',
         description: '',
         content: (<ul>
-            <li>Buena autoestima</li>
-            <li>Percepción de contar con una red social de apoyo</li>
-            <li>Buena comunicación familiar</li>
-            <li>Sentimiento de pertenencia</li>
-            <li>Buena regulación emocional</li>
-            <li>Sensación de autocontrol</li>
-            <li>Capacidad para la resolución de problemas</li>
-            <li>Perspectiva optimista respecto del futuro</li>
-            <li>Flexibilidad</li>
-        </ul>), 
+            <li>Ideación suicidas: presencia, contenido, intensidad, frecuencia, duración.</li>
+            <li>Plan suicida: grado de planeación vinculado a cómo llevarlo a cabo.</li>
+            <li>Intento previo: presencia, método utilizado, circunstancias que rodearon el acto.</li>
+            <li>Antecedentes en la familia y/o entorno social próximo.</li>
+        </ul>),
       },
 
       {
         id: '4',
         image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'Preguntar a una persona si está pensando en suicidarse, puede incitarle a hacerlo.',
+        label: 'Factores Precipitantes',
         description: '',
-        content: `
-            /-Ejempl
-             -> ahindsojd
-             -> iaspfips
-        `,
-    },
+        content: (<ul>
+            <li>Ideación suicidas: presencia, contenido, intensidad, frecuencia, duración.</li>
+            <li>Plan suicida: grado de planeación vinculado a cómo llevarlo a cabo.</li>
+            <li>Intento previo: presencia, método utilizado, circunstancias que rodearon el acto.</li>
+            <li>Antecedentes en la familia y/o entorno social próximo.</li>
+        </ul>),
+      },
 ]
-// content: "Está demostrado que preguntar y hablar con la persona sobre la presencia de pensamientos suicidas, disminuye el riesgo de cometer el acto. Hablar siempre genera alivio en la persona que está sufriendo.Es muy importante acercarse con una actitud de comprensión y de escucha, para que sienta tu deseo de ayudar y tu preocupación. No intentes discutir o minimizar estas ideas. Dejalx hablar de lo que le pasa.",
 function AccordionLabel({ label, image, description }) {
     return (
       <Group noWrap>
@@ -100,9 +95,7 @@ function AccordionLabel({ label, image, description }) {
                 <AccordionLabel {...item} />
               </Accordion.Control>
               <Accordion.Panel>
-                <Text size="sm">{typeof item.content == "string" ? (
-                    
-                ) : item.content}</Text>
+                <Text size="sm">{item.content}</Text>
               </Accordion.Panel>
             </Accordion.Item>
           ))
