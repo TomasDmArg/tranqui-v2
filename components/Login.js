@@ -12,7 +12,7 @@ import {
   } from '@mantine/core';
   
   export default function AuthenticationTitle() {
-    return (
+    return (    
       <Container size={420} my={40}>
         <Title
           align="center"
@@ -31,7 +31,7 @@ import {
           <PasswordInput label="Password" placeholder="Tu contraseña" required mt="md" />
           <Group  position="apart" mt="md">
             <Checkbox label="Recuérdame" />
-            <Anchor onClick={(event) => event.preventDefault()} href="#" size="sm">
+            <Anchor href="forgot" size="sm" onClick={(event) => event.preventDefault()}>
               Olvidaste tú contraseña?
             </Anchor>
           </Group>
