@@ -16,7 +16,7 @@ export default function HeroText() {
                 intervención que se podrían realizar tanto desde la sociedad en general, como los profesionales de la
                 salud, docentes, etc. Por ello, es fundamental erradicarlos y la mejor manera es a través de información 
                 basada en los hallazgos científicos de la suicidología.</h4>
-                <Faq />
+                <Faq/>
             </main>
         </React.Fragment>
     )
