@@ -110,3 +110,10 @@ a {
     }
   }
 }
+
+.main-logo{
+  cursor: pointer;
+}
+.nav-link{
+  @extend .main-logo;
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 const HEADER_HEIGHT = 60;
 
 const useStyles = createStyles((theme) => ({
@@ -76,15 +77,15 @@ export function HeaderResponsive({ links }) {
   const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
-
+  const router = useRouter();
   const items = links.map((link) => (
     <a
       key={link.label}
-      href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+      className={cx(classes.link, { [classes.linkActive]: active === link.link }) + ' nav-link'}
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
+        router.push(link.link);
         close();
       }}
     >
@@ -97,10 +98,12 @@ export function HeaderResponsive({ links }) {
       <Container className={classes.header}>
         <Image
           src="/logo-sm.svg"
-          alt="Mantine"
+          onClick={() => router.push('/')}
+          alt="Tranqui"
           width={125}
           height={48}
           style={{ marginBottom: -10 }}
+          className="main-logo"
         />
         <Group spacing={5} className={classes.links}>
           {items}
