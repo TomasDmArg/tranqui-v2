@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from "next/head"
 import Faq from '../components/faq';
+import Faq2 from '../components/Faq2';
 export default function HeroText() {
     return (
         <React.Fragment>
@@ -17,6 +18,10 @@ export default function HeroText() {
                 salud, docentes, etc. Por ello, es fundamental erradicarlos y la mejor manera es a través de información 
                 basada en los hallazgos científicos de la suicidología.</h4>
                 <Faq/>
+            </main>
+            <main>
+                <h2>Factores protectores, de riesgo y precipitantes</h2>
+                <Faq2/>
             </main>
         </React.Fragment>
     )
