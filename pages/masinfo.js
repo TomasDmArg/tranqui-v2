@@ -2,6 +2,8 @@ import React from 'react';
 import Head from "next/head"
 import Faq from '../components/faq';
 import Faq2 from '../components/Faq2';
+import Faq3 from '../components/Faq3';
+import Faq4 from '../components/Faq4';
 export default function HeroText() {
     return (
         <React.Fragment>
@@ -22,6 +24,15 @@ export default function HeroText() {
             <main>
                 <h2>Factores protectores, de riesgo y precipitantes</h2>
                 <Faq2/>
+            </main>
+            <main>
+                <h2>Señales de Alerta</h2>
+                <h4>Signos y características detectables que indicarían elevado riesgo de intento de suicidio en el tiempo próximo, es decir que pueden señalar con cierto grado de probabilidad el desenlace inminente de una crisis suicida.</h4>
+                <Faq3/>
+            </main>
+            <main>
+                <h2>A Dónde ir</h2>
+                <Faq4/>
             </main>
         </React.Fragment>
     )

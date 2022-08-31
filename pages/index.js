@@ -46,7 +46,9 @@ export default function HeroText() {
             <Button className="control1" size="lg">
               Necesito ayuda
             </Button>
-            <Button className="control" size="lg" variant="default" color="gray">
+            <Button className="control" size="lg" variant="default" color="gray" 
+              onClick={()=> router.push("/conozco")}
+            >
               Conozco a alguien
             </Button>
           </div>

@@ -38,7 +38,7 @@ const charactersList = [
     id: '5',
     image: 'https://img.icons8.com/clouds/256/000000/homer-simpson.png',
     label: 'Solo las personas con problemas graves se suicidan.',
-    description: 'Overweight, lazy, and often ignorant',
+    description: '',
     content: 'El suicidio es multicausal. Muchos problemas pequeños pueden llevar al suicidio. Nunca menosprecies ni compares. Lo que para algunos puede ser un problema simple o sin importancia, para otros puede ser algo catastrófico.',
   },
 
