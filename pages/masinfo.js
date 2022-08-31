@@ -34,12 +34,12 @@ export default function HeroText() {
                 <Faq2/>
             </main>
             <main>
-                <h2>Señales de Alerta</h2>
+                <h2>Señales de alerta</h2>
                 <h4>Signos y características detectables que indicarían elevado riesgo de intento de suicidio en el tiempo próximo, es decir que pueden señalar con cierto grado de probabilidad el desenlace inminente de una crisis suicida.</h4>
                 <Faq3/>
             </main>
             <main>
-                <h2>A Dónde ir</h2>
+                <h2>A dónde ir</h2>
                 <Faq4/>
             </main>
         </React.Fragment>
