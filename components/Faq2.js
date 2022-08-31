@@ -45,10 +45,10 @@ const charactersList = [
         label: 'Factores Precipitantes',
         description: '',
         content: (<ul>
-            <li>Ideación suicidas: presencia, contenido, intensidad, frecuencia, duración.</li>
-            <li>Plan suicida: grado de planeación vinculado a cómo llevarlo a cabo.</li>
-            <li>Intento previo: presencia, método utilizado, circunstancias que rodearon el acto.</li>
-            <li>Antecedentes en la familia y/o entorno social próximo.</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>),
       },
 
