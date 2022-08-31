@@ -64,8 +64,10 @@ const charactersList = [
         description: '',
         content: `
             /-Ejempl
-             -> ahindsojd
-             -> iaspfips
+            {
+              -> ahindsojd
+              -> iaspfips
+            }
         `,
     },
 ]
@@ -90,7 +92,49 @@ function AccordionLabel({ label, image, description }) {
       setItems(charactersList)
       console.log(charactersList)
     }, [])
-  
+    const getHTML = (content) => {
+      // If content line starts with "/-" it's the title
+      // If content line is {
+      // If content line starts with "->" it's a list item
+      // If content line starts with "{" it's the end of the list
+      // If content line starts with "}" it's the end of the list
+      let html = "";
+      let list = false;
+      let title = false;
+      let listItems = [];
+      content.split("\n").forEach((line) => {
+        line = line.trim();
+        if (line.startsWith("/-")) {
+          title = true;
+          line = line.replace("/-", "");
+        }
+        if (line.startsWith("{")) {
+          list = true;
+          line = line.replace("{", "");
+        }
+        if (line.startsWith("}")) {
+          list = false;
+          line = line.replace("}", "");
+        }
+        if (line.startsWith("->")) {
+          listItems.push(line.replace("->", ""));
+          line = line.replace("->", "");
+        }
+        if (title) {
+          html += `<h3>${line}</h3>`;
+          title = false;
+        }
+        if (list) {
+          html += `<ul>`;
+          listItems.forEach((item) => {
+            html += `<li>${item}</li>`;
+          });
+          html += `</ul>`;
+        }
+        if (!list && !title) html += `<p>${line}</p>`;
+      });
+      return html;
+    }
     return (
       <Accordion chevronPosition="right" variant="contained">{
         items.length > 0 && (
@@ -101,7 +145,7 @@ function AccordionLabel({ label, image, description }) {
               </Accordion.Control>
               <Accordion.Panel>
                 <Text size="sm">{typeof item.content == "string" ? (
-                    
+                  <div dangerouslySetInnerHTML={{ __html: getHTML(item.content) }} />
                 ) : item.content}</Text>
               </Accordion.Panel>
             </Accordion.Item>
