@@ -5,6 +5,7 @@ import { Dots } from '../components/Dots';
 import { HeaderResponsive } from '../components/Header';
 import React from 'react';
 import { useRouter } from "next/router";
+import HelpModal from '../components/Landing/Modal';
 export default function HeroText() {
   const router = useRouter();
   return (
@@ -32,6 +33,9 @@ export default function HeroText() {
               width={268}
               height={97}
               style={{ marginBottom: -10 }}
+              transition="fade"
+              transitionDuration={600}
+              transitionTimingFunction="ease"
             />
           </Title>
 
@@ -41,16 +45,7 @@ export default function HeroText() {
             </Text>
           </Container>
 
-          <div className="controls">
-            <Button className="control1" size="lg">
-              Necesito ayuda
-            </Button>
-            <Button className="control" size="lg" variant="default" color="gray" 
-              onClick={()=> router.push("/conozco")}
-            >
-              Conozco a alguien
-            </Button>
-          </div>
+          <HelpModal/>
           <div className="controls">
             <Button className="control" size="lg" variant="subtle" color="gray"
               onClick={()=> router.push("/masinfo")}
