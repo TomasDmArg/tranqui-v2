@@ -5,7 +5,7 @@ const charactersList = [
     {
         id: '1',
         image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'Factores Protectores.',
+        label: 'Factores protectores.',
         description: '',
         content: (<ul>
             <li>Buena autoestima</li>
@@ -23,7 +23,7 @@ const charactersList = [
       {
         id: '2',
         image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'factores de Riesgo',
+        label: 'factores de riesgo',
         description: '',
         content: (<ul>
             <li>Baja autoestima</li>
@@ -42,7 +42,7 @@ const charactersList = [
       {
         id: '3',
         image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'Factores Precipitantes',
+        label: 'Factores precipitantes',
         description: '',
         content: (<ul>
             <li></li>
@@ -55,7 +55,7 @@ const charactersList = [
       {
         id: '4',
         image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
-        label: 'Factores Precipitantes',
+        label: 'Dimensiones suicidológicas',
         description: '',
         content: (<ul>
             <li>Ideación suicidas: presencia, contenido, intensidad, frecuencia, duración.</li>
