@@ -7,7 +7,7 @@ export default function Page() {
         <React.Fragment>
             <HeaderResponsive links={
                 [
-                    { link: '/register', label: 'Registrarse' },
+                    { link: '/login', label: 'Registrarse/Iniciar sesión' },
                     { link: '/professionals', label: 'Para profesionales' },
                 ]
             }/>
