@@ -4,12 +4,21 @@ import Faq from '../components/faq';
 import Faq2 from '../components/Faq2';
 import Faq3 from '../components/Faq3';
 import Faq4 from '../components/Faq4';
+import { HeaderResponsive } from '../components/Header';
+
 export default function HeroText() {
     return (
         <React.Fragment>
             <Head>
                 <title>Más información</title>
             </Head>
+            <HeaderResponsive links={
+                [
+                    { link: '/login', label: 'Iniciar sesión' },
+                    { link: '/register', label: 'Registrarse' },
+                    { link: '/professionals', label: 'Para profesionales' },
+                ]
+            }/>
             <main>
                <h1>Mas Información</h1>
                <h2>mitos sobre el suicidio</h2>
