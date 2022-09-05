@@ -9,7 +9,7 @@ const charactersList = [
         description: '',
         content: (<ul>
             <li><a href="atencion.pdf">Atención de las urgencias en salud mental</a></li>
-            <li><a href="dispositivos.pdf">Dispositivos de Atención de salud mental</a></li>
+            <li><a href="dispositivos.pdf">Dispositivos de atención de salud mental</a></li>
         </ul>),
       },
 ]
