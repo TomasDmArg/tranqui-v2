@@ -21,23 +21,27 @@ export default function Page(){
             <hr></hr>
             <p>Lic. Santiago González. Jefe de Salud Mental de la Municipalidad de General Pueyrredón.</p>
             <hr></hr>
-            <p>Est. Dario Funes. Est. Lucas Funes. Prof. Pablo Abdala Achaval. E.E.S.T. N°5 "Amancio Williams" Mar del Plata.</p>
+            <p>Est. Dario Funes. Est. Lucas Funes. Prof. Pablo Abdala Achaval. E.E.S.T. N°5 &ldquo;Amancio Williams&ldquo; Mar del Plata.</p>
             <hr></hr>
             <Image
                 width={140}
                 src="eestn5.png"
+                alt="logo escuela"
             />
             <Image
                 width={300}
                 src="facultad-psicologia.png"
+                alt="facultad psicologia"
             />
             <Image
                 width={140}
                 src="salud-mgp.png"
+                alt="salud mgp"
             />
             <Image
                 width={600}
                 src="bsas.jpg"
+                alt="bsas"
             />
         </React.Fragment>
     )
