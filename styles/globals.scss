@@ -114,7 +114,39 @@ a {
     }
   }
 }
-
+.control2{
+  background-color: #45FFBD90;
+  color: #000;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 800;
+  &:hover{
+    background-color: #45FFBD;
+  }
+  &:not(:first-of-type){
+    margin-left: 20px;
+  }
+  @media (max-width: 520px) {
+    height: 42px;
+    font-size: 16px;
+    &:not(:first-of-type){
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+}
+.modal1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content{
+    width: 30vw;
+    padding: 10px 0 40px 0;
+    margin-left: calc(50% - 15vw);
+    & > h2{
+      margin-bottom: 40px;
+    }
+  }
+}
 .main-logo{
   cursor: pointer;
 }

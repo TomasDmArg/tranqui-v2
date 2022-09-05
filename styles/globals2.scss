@@ -110,3 +110,21 @@ a {
     }
   }
 }
+.control2{
+  background-color: #45FFBD90;
+  color: #000;
+  &:hover{
+    background-color: #45FFBD;
+  }
+  &:not(:first-of-type){
+    margin-left: 20px;
+  }
+  @media (max-width: 520px) {
+    height: 42px;
+    font-size: 16px;
+    &:not(:first-of-type){
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+}
