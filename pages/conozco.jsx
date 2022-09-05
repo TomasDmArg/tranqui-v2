@@ -174,7 +174,7 @@ export default function Page(){
              No desafiar, no despreciar, minimizar, ni desoír las amenazas.
             </li>
             <li>
-           No repetir frases hechas ni dar consejos simplistas (por ejemplo: “con todo lo que tenés…”, “con lo bonita que es la vida”, etc.). 
+           No repetir frases hechas ni dar consejos simplistas (por ejemplo: &ldquo;con todo lo que tenés…&ldquo;, &ldquo;con lo bonita que es la vida&ldquo;, etc.). 
             </li>
             <li>
             Decile que estás dispuestx a escuchar lo que tiene para decir. Dale el tiempo que necesite hasta que termine de hablar.  
@@ -187,7 +187,7 @@ export default function Page(){
             <Collapse className="collapse" in={opened8} transitionDuration={300} transitionTimingFunction="linear">
                 <ul>
                 <li>
-                “Si no pudiste encontrar una solución, no quiere decir que no la haya, sino que ahora te cuesta verla. Hay personas que te pueden ayudar a pensar alternativas: profesionales, familia o amigxs. Con el tiempo y su ayuda, vas a poder ver las cosas de una forma distinta”.
+                &ldquo;Si no pudiste encontrar una solución, no quiere decir que no la haya, sino que ahora te cuesta verla. Hay personas que te pueden ayudar a pensar alternativas: profesionales, familia o amigxs. Con el tiempo y su ayuda, vas a poder ver las cosas de una forma distinta&ldquo;.
                 </li>
                 <li>
                 Recordale que aunque ahora no se siente así, las cosas cambian. Este malestar intenso va a disminuir. VA A PASAR. EL SUICIDIO ES ALGO PERMANENTE ANTE ESTADOS DE CRISIS QUE SON TEMPORALES.  
@@ -359,7 +359,7 @@ export default function Page(){
             <Collapse className="collapse" in={opened18} transitionDuration={300} transitionTimingFunction="linear">
                 <p>
                 Armá el listado de los números de emergencia a los que podés llamar en caso que los pasos anteriores no hayan servido para manejar la crisis.
-                Para ver listado de dispositivos de atención de salud mental en Gral. Pueyrredón, entra a la sección de "Más Información".
+                Para ver listado de dispositivos de atención de salud mental en Gral. Pueyrredón, entra a la sección de &ldquo;Más Información&ldquo;.
                 </p>
             </Collapse>
             </main>
