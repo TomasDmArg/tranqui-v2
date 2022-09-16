@@ -20,7 +20,6 @@ export default function HeroText() {
       setSession(session);
     });
   }, []);
-
   return (
     <React.Fragment>
       <Head>

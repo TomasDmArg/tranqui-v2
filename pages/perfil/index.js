@@ -1,7 +1,8 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { supabase } from "../utils/supabaseClient";
+import { supabase } from "../../utils/supabaseClient";
 import { Loader, Group } from "@mantine/core";
+import { DashboardNav } from "../../components/Dashboard/Navbar";
 
 export default function Dashboard(){
     const router = useRouter();
@@ -25,6 +26,7 @@ export default function Dashboard(){
 
     return ( 
         <React.Fragment>
+            <DashboardNav selectedLink="Mi musica" />
             {
                 loading && (
                     <Group>
@@ -49,7 +51,7 @@ export default function Dashboard(){
             {/* Logged in state */}
             {
                 !loading && user && (
-                    <Group>
+                    <React.Fragment>
                         <h1>Dashboard</h1>
                         <h2>Bienvenido {user.email}</h2>
                         <button onClick={
@@ -57,7 +59,7 @@ export default function Dashboard(){
                                 router.push("/signout");
                             }
                         }>Sign out</button>
-                    </Group>
+                    </React.Fragment>
                 )
             }
         </React.Fragment>
