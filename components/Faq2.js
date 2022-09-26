@@ -4,7 +4,7 @@ import Faq5 from "./Faq5";
 const charactersList = [
   {
     id: "1",
-    image: "https://img.icons8.com/clouds/256/000000/futurama-bender.png",
+    image: "",
     label: "Factores protectores.",
     description: "",
     content: (
@@ -24,7 +24,7 @@ const charactersList = [
 
   {
     id: "2",
-    image: "https://img.icons8.com/clouds/256/000000/futurama-bender.png",
+    image: "",
     label: "factores de riesgo",
     description: "",
     content: (

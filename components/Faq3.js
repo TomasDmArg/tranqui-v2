@@ -4,7 +4,7 @@ import { Group, Avatar, Text, Accordion } from '@mantine/core';
 const charactersList = [
     {
         id: '1',
-        image: 'https://img.icons8.com/clouds/256/000000/futurama-bender.png',
+        image: '',
         label: 'Factores Protectores.',
         description: '',
         content: (<ul>
