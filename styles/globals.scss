@@ -170,3 +170,56 @@ a {
 h1{
   font-weight: 800;
 }
+
+.dashboard__profile{
+  background-color: #fffdd1;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+.dashboard__content{
+  padding-top: 50px;
+  & > h1{
+    margin: 0;
+    font-size: 30px;
+  }
+  & > h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+.dashboard__card{
+  &--main{
+    margin: 20px 0px 20px 0px;
+    border-radius: 8px;
+    background-color: #45FFBD;
+    padding: 20px;
+    width: 40vw;
+  }
+  &--button{
+    background-color: #fffdd1;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      transition: all 0.3s ease-in-out;
+      width: 150px;
+    }
+    &:before{
+      content: "Reproducir";
+      font-size: 12px;
+      font-weight: 800;
+      opacity: 0;
+      margin: 0 10px;
+    }
+    &:hover::before{
+      transition-delay: 0.2s;
+      opacity: 1;
+      display: inline-block;
+    }
+  }
+}

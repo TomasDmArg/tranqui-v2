@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { supabase } from "../../utils/supabaseClient";
 import { Loader, Group } from "@mantine/core";
 import { DashboardNav } from "../../components/Dashboard/Navbar";
+import Musica from "./musica";
+import Player from "../../components/Player";
 
 export default function Dashboard(){
     const router = useRouter();
@@ -25,7 +27,7 @@ export default function Dashboard(){
     }, []);
 
     return ( 
-        <React.Fragment>
+        <section className="dashboard__profile">
             <DashboardNav selectedLink="Mi musica" />
             {
                 loading && (
@@ -51,17 +53,12 @@ export default function Dashboard(){
             {/* Logged in state */}
             {
                 !loading && user && (
-                    <React.Fragment>
-                        <h1>Dashboard</h1>
-                        <h2>Bienvenido {user.email}</h2>
-                        <button onClick={
-                            ()=>{
-                                router.push("/signout");
-                            }
-                        }>Sign out</button>
-                    </React.Fragment>
+                    <section>
+                        <Musica user={user}/>
+                        <Player/>
+                    </section>
                 )
             }
-        </React.Fragment>
+        </section>
     )
 }

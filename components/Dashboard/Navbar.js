@@ -22,16 +22,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
     navbar: {
       height: '100vh',
       backgroundColor: "#4242ff",
+      border: "none",
     },
 
     header: {
       paddingBottom: theme.spacing.md,
       marginBottom: theme.spacing.md * 1.5,
-      borderBottom: `1px solid ${theme.fn.lighten(
-        theme.fn.variant({ variant: "filled", color: theme.primaryColor })
-          .background,
-        0.1
-      )}`,
+      border: "none",
     },
 
     footer: {
@@ -54,9 +51,10 @@ const useStyles = createStyles((theme, _params, getRef) => {
       padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
       borderRadius: theme.radius.sm,
       fontWeight: 500,
+      margin: "20px 0",
 
       "&:hover": {
-        backgroundColor: "#45FFBD",
+        backgroundColor: "#45FFBDa0",
         color: "#171717"
       },
       "&:hover > .linkIcon": {
