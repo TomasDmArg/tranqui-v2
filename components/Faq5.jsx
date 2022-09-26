@@ -22,7 +22,7 @@ export default function Faq() {
         <Accordion.Control>
           <AccordionLabel
             label="Factores precipitantes"
-            image="https://img.icons8.com/clouds/256/000000/futurama-bender.png"
+            image="/add-outline.svg"
             id={3}
           />
         </Accordion.Control>
@@ -34,7 +34,7 @@ export default function Faq() {
               <Accordion.Control>
                 <AccordionLabel
                   label="Comunes a todas las edades"
-                  image="https://img.icons8.com/clouds/256/000000/futurama-bender.png"
+                  image="/add-outline.svg"
                   id={3}
                 />
               </Accordion.Control>
@@ -61,7 +61,7 @@ export default function Faq() {
               <Accordion.Control>
                 <AccordionLabel
                   label="Adolescentes y jovenes"
-                  image="https://img.icons8.com/clouds/256/000000/futurama-bender.png"
+                  image="/add-outline.svg"
                   id={3}
                 />
               </Accordion.Control>
@@ -85,7 +85,7 @@ export default function Faq() {
               <Accordion.Control>
                 <AccordionLabel
                   label="Adultos"
-                  image="https://img.icons8.com/clouds/256/000000/futurama-bender.png"
+                  image="/add-outline.svg"
                   id={3}
                 />
               </Accordion.Control>
@@ -105,7 +105,7 @@ export default function Faq() {
               <Accordion.Control>
                 <AccordionLabel
                   label="Adultos mayores"
-                  image="https://img.icons8.com/clouds/256/000000/futurama-bender.png"
+                  image="/add-outline.svg"
                   id={3}
                 />
               </Accordion.Control>
