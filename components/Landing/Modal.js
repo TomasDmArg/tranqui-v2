@@ -1,8 +1,9 @@
 import { Modal, Button, Text, Group } from "@mantine/core";
 import React from "react";
 import { IoCheckmarkOutline, IoCloseOutline } from "react-icons/io5";
-
+import { useRouter } from "next/router";
 export default function ModalExample({ open }) {
+  const router = useRouter();
   const [opened, setOpened] = React.useState(false);
   return (
     <React.Fragment>
