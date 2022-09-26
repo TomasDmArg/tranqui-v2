@@ -59,9 +59,6 @@ export default function HeroText() {
           </Title>
 
           <Container p={0} size={600}>
-            <Text size="lg" color="dimmed" className="description">
-              ¿Estás pasando por una crisis? Tranqui, te ayudamos a superarla.
-            </Text>
           </Container>
 
           <HelpModal />
