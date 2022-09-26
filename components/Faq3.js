@@ -34,7 +34,7 @@ const charactersList = [
 function AccordionLabel({ label, image, description }) {
     return (
       <Group noWrap>
-        <Avatar src={image} radius="xl" size="lg" />
+        <Avatar src={image} radius="xl" size="sm" />
         <div>
           <Text>{label}</Text>
           <Text size="sm" color="dimmed" weight={400}>
