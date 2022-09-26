@@ -77,7 +77,7 @@ export default function Page(){
                 Está demostrado que preguntar y hablar con la persona sobre la presencia de pensamientos suicidas, disminuye el riesgo de cometer el acto. Hablar siempre genera alivio en la persona que está sufriendo.
                 Es muy importante acercarse con una actitud de comprensión y de escucha, para que sienta tu deseo de ayudar y tu preocupación. No intentes discutir o minimizar estas ideas. Dejalx hablar de lo que le pasa.
                 </p>
-            </Collapse>
+            </Collapse><br/>
             <Button className="collapse-btn"  onClick={() => setOpened2((o) => !o)}>
                 Mito 2: La persona que expresa su deseo de acabar con su vida nunca lo hará
             </Button>
@@ -86,7 +86,7 @@ export default function Page(){
                 La gran mayoría de los casos en que las personas han intentado suicidarse, habían manifestado de alguna manera su intención de hacerlo con palabras, amenazas, gestos o cambios de conducta.
                 Estas verbalizaciones o gestos SIEMPRE indican que esa persona está sufriendo, necesita ayuda y no sabe cómo pedirla. Es muy importante que NUNCA sean consideradas como un simple llamado de atención, chantaje o manipulación de la persona para la obtención de un fin determinado.
                 </p>
-            </Collapse>
+            </Collapse><br/>
             <Button className="collapse-btn"  onClick={() => setOpened3((o) => !o)}>
                 Mito 3: La persona que se quiere suicidar no lo dice
             </Button>
@@ -95,7 +95,7 @@ export default function Page(){
                 Solamente un pequeño número de suicidios se produce sin aviso. De cada 10 personas que se suicidan, 9 lo expresaron claramente o dejaron entrever sus intenciones de acabar con su vida.
                 Todas las amenazas de autolesión deben ser tomadas en serio. Por eso, si detectás una señal de alerta directa o indirecta y creés que la persona que te preocupa se encuentra en una situación de riesgo, es importante que le preguntes sobre ello.
                 </p>
-            </Collapse>
+            </Collapse><br/>
             <Button className="collapse-btn"  onClick={() => setOpened4((o) => !o)}>
                 Mito 4: El suicidio es impulsivo y la mayoría de los suicidas no avisa
             </Button>
@@ -104,7 +104,7 @@ export default function Page(){
                 El suicidio puede ser el resultado de un acto impulsivo repentino o de una planificación muy cuidadosa. En ambos casos, casi siempre existen señales directas o indirectas, mensajes, gestos que advierten el riesgo de un intento de suicidio.
                 Es erróneo pensar que no podemos hacer nada para prevenir la conducta suicida. El suicidio y/o sus intentos, en muchas ocasiones, se pueden prevenir y es por ello muy importante que aprendamos a detectar las señales de alerta de riesgo.
                 </p>
-            </Collapse>
+            </Collapse><br/>
             <Button className="collapse-btn"  onClick={() => setOpened5((o) => !o)}>
                 Mito 5: Solo las personas con probleas graves se suicidan
             </Button>
